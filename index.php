@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
-<script src="bootstrap-5.3.3-dist/js/bootstrap.js" defer></script>
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js" defer></script>
 <title>Country List</title>
 </head>
 
@@ -12,16 +12,15 @@
     <div class="d-flex">
         <div class="p-2 flex-fill"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
         <div class="p-2"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></div>
-        <div class="dropdown p-2">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Select Year </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+        <div class="p-2">
+            <label for="years"></label>
+            <select name="years" id="years" class="form-select-sm p-2" aria-label="Default select example">
+                <option value="placeholder1">Place holder 1</option>
+                <option value="placeholder2">Place holder 2</option>
+            </select>
         </div>
     </div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th scope="col">Flag</th>
