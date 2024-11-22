@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
+    <script src="scripts/flags.js" defer> </script>
     <title>Country Details</title>
 </head>
 
 <body>
     <div class="d-flex" id="countryDetailsTop">
-        <div class="p-2"><img src=""></div>
+        <div class="p-1"><img src="" id="flag"></div>
         <div class="p-2">
             <h2><strong>Country name</strong></h2>
         </div>
-        <div class="p-2"><a href="index.php"><button type="button" class="btn btn-light">Back</button></a></div> 
+        <div class="p-2"><a href="index.php"><button type="button" class="btn btn-light">Back</button></a></div>
     </div>
     <div class="p-2">
         <table class="table table-bordered">

@@ -1,3 +1,7 @@
 #countryDetailsTop{
     justify-content: space-between;
 }
+
+#flag{
+    height: 45px;
+}

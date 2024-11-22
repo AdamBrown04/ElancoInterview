@@ -13,22 +13,22 @@
         <div class="p-2"><button class="btn btn-success my-2 my-sm-0" type="submit">Search</button></div>
     </div>
     <div class="p-2">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">Flag</th>
-                <th scope="col">Country Name</th>
-                <th scope="col">Population</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Flag</th>
+                    <th scope="col">Country Name</th>
+                    <th scope="col">Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
