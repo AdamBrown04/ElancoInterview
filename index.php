@@ -10,7 +10,7 @@
 <body>
     <div class="d-flex">
         <div class="p-2 flex-fill"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
-        <div class="p-2"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></div>
+        <div class="p-2"><button class="btn btn-success my-2 my-sm-0" type="submit">Search</button></div>
     </div>
     <div class="p-2">
     <table class="table table-bordered">

@@ -15,7 +15,7 @@
         <div class="p-2">
             <h2><strong>Country name</strong></h2>
         </div>
-        <div class="p-2"><button type="button" class="btn btn-light">Back</button></div> 
+        <div class="p-2"><a href="index.php"><button type="button" class="btn btn-light">Back</button></a></div> 
     </div>
     <div class="p-2">
         <table class="table table-bordered">
