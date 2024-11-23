@@ -23,11 +23,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
