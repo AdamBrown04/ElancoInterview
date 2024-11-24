@@ -6,7 +6,7 @@ async function getCountryFlag(country) {
         const countryData = data.data.find(item => item.name.toLowerCase() === country.toLowerCase()); //finds the country data by name
         if (countryData) {
             console.log(`Flag of ${country}: ${countryData.flag}`);
-            document.getElementById('flag').src = countryData.flag; //my code
+            document.getElementById('flag').src = countryData.flag; //sets the image source to the flag of the country
             
         } else {
             console.log(`Country ${country} not found.`);
