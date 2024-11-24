@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
-<script src="scripts/findPopulation.js" defer></script>
+<script src="scripts/findPopulation.js" type="module" defer></script>
 <title>Country List</title>
 </head>
 
@@ -14,7 +14,7 @@
         <div class="p-2"><button class="btn btn-success my-2 my-sm-0" type="submit">Search</button></div>
     </div>
     <div class="p-2">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover" id="population-table">
             <thead>
                 <tr>
                     <th scope="col">Flag</th>

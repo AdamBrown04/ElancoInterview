@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
-    <script src="scripts/flags.js" defer> </script>
+    <script src="scripts/flags.js" type="module" defer> </script>
     <title>Country Details</title>
 </head>
 

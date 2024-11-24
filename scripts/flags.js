@@ -16,3 +16,5 @@ async function getCountryFlag(country) {
 }
 //find a way to get the country name from index page, thinking of having querry going through the url
 getCountryFlag('');
+
+export { getCountryFlag }; //exports the function getCountryFlag

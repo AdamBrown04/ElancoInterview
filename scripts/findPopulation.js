@@ -1,4 +1,6 @@
+import { getCountryFlag } from './flags.js';
 const url = 'https://countriesnow.space/api/v0.1/countries/population';
+
 
 async function getPopulationData() {
     try {
@@ -7,50 +9,49 @@ async function getPopulationData() {
 
         if (data.error) {
             console.error('Error fetching data:', data.msg);
-            return;
+            return [];
         }
 
-        const populationData2018 = data.data.map(country => {
+        return data.data.map(country => {
             const population2018 = country.populationCounts.find(pop => pop.year === 2018);
             return {
                 country: country.country,
                 population: population2018 ? population2018.value : 'Data not available'
             };
         });
-
-        console.log(populationData2018);
     } catch (error) {
         console.error('Error:', error);
+        return [];
     }
 }
-isUndefined(getPopulationData());
-async function generatePopulationTable() {
-    const populationData = await getPopulationData(); //popdata is not an array according to isArray
-    const table = document.getElementById('population-table');
 
-    populationData.forEach(country => {
+async function generatePopulationTable() {
+    const populationData = await getPopulationData();
+    if (!Array.isArray(populationData)) {
+        console.error('Expected populationData to be an array, but got:', typeof populationData);
+        return;
+    }
+    const table = document.getElementById('population-table');
+    
+    for(var i = 46;i<populationData.length;i++){
+        const country = populationData[i];
         const row = document.createElement('tr');
         const flagCell = document.createElement('td');
+        flagCell.setAttribute('id', 'flag');
         const countryCell = document.createElement('td');
         const populationCell = document.createElement('td');
 
+        flagCell.innerHTML = getCountryFlag(country.country);
         countryCell.textContent = country.country;
         populationCell.textContent = country.population;
 
+        row.appendChild(flagCell);
         row.appendChild(countryCell);
         row.appendChild(populationCell);
 
         table.appendChild(row);
-    });
+    };
 }
 
 
 generatePopulationTable();
-
-/*
- <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-*/
