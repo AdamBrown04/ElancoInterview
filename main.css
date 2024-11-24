@@ -5,3 +5,29 @@
 #flag{
     height: 45px;
 }
+
+#population-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#population-table th, #population-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#population-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#population-table tr:hover {
+    background-color: #ddd;
+}
+#population-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.flag {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}

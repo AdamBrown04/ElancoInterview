@@ -1,7 +1,6 @@
 import { getCountryFlag } from './flags.js';
 const url = 'https://countriesnow.space/api/v0.1/countries/population';
 
-
 async function getPopulationData() {
     try {
         const response = await fetch(url);
@@ -42,12 +41,18 @@ async function generatePopulationTable() {
 
         // Create an img element and set its src attribute
         const flagImg = document.createElement('img');
-        flagImg.src = await getCountryFlag(country.country);
-        flagImg.alt = `Flag of ${country.country}`;
-        flagImg.classList.add('flag'); // Add a class for styling if needed
+        const flagUrl = await getCountryFlag(country.country);
+        if (flagUrl) {
+            flagImg.src = flagUrl;
+            flagImg.alt = `Flag of ${country.country}`;
+            flagImg.classList.add('flag'); // Add a class for styling if needed
 
-        // Append the img element to the flagCell
-        flagCell.appendChild(flagImg);
+            // Append the img element to the flagCell
+            flagCell.appendChild(flagImg);
+        } else {
+            flagCell.textContent = 'Flag not available';
+        }
+        
         countryCell.textContent = country.country;
         populationCell.textContent = country.population;
 
@@ -58,5 +63,22 @@ async function generatePopulationTable() {
         tableBody.appendChild(row);
     }
 }
+
+function filterTable() {
+    const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+    const tableRows = document.querySelectorAll('#population-table tbody tr');
+
+    tableRows.forEach(row => {
+        const countryCell = row.querySelector('td:nth-child(2)');
+        const countryName = countryCell.textContent.toLowerCase();
+        if (countryName.includes(searchTerm)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
+document.getElementById('search-bar').addEventListener('input', filterTable);
 
 generatePopulationTable();
