@@ -7,7 +7,7 @@
     <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
     <script src="scripts/flags.js" type="module" defer></script>
-    <script src="scripts/getCitiesPopulation.js" defer>
+    <script src="scripts/getCitiesPopulation.js" defer></script>
     <title>Country Details</title>
 </head>
 
