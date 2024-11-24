@@ -34,33 +34,12 @@ async function generatePopulationTable() {
 
     for (let i = 46; i < populationData.length; i++) {
         const country = populationData[i];
-        const row = document.createElement('tr');
-        const flagCell = document.createElement('td');
-        const countryCell = document.createElement('td');
-        const populationCell = document.createElement('td');
-
-        // Create an img element and set its src attribute
-        const flagImg = document.createElement('img');
-        const flagUrl = await getCountryFlag(country.country);
-        if (flagUrl) {
-            flagImg.src = flagUrl;
-            flagImg.alt = `Flag of ${country.country}`;
-            flagImg.classList.add('flag'); // Add a class for styling if needed
-
-            // Append the img element to the flagCell
-            flagCell.appendChild(flagImg);
-        } else {
-            flagCell.textContent = 'Flag not available';
-        }
-        
-        countryCell.textContent = country.country;
-        populationCell.textContent = country.population;
-
-        row.appendChild(flagCell);
-        row.appendChild(countryCell);
-        row.appendChild(populationCell);
-
-        tableBody.appendChild(row);
+        tableBody.innerHTML += `
+            <tr>
+            <td><img src="${getCountryFlag(country.country)}" alt="Flag of ${country.country}" class="flag"></td>
+            <td>${country.country}</td>
+            <td>${country.population}</td>
+            </tr>`;
     }
 }
 

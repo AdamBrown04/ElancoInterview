@@ -7,6 +7,7 @@ async function getCountryFlag(country) {
         if (countryData) {
             console.log(`Flag of ${country}: ${countryData.flag}`);
             document.getElementById('flag').src = countryData.flag; //my code
+            
         } else {
             console.log(`Country ${country} not found.`);
         }
@@ -14,7 +15,7 @@ async function getCountryFlag(country) {
         console.error('Error fetching country flag:', error);
     }
 }
-//find a way to get the country name from index page, thinking of having querry going through the url
+
 getCountryFlag('');
 
 export { getCountryFlag }; //exports the function getCountryFlag
